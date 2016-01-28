@@ -15,9 +15,9 @@ $ npm install --global is-github-down
 ```
 $ is-github-down
 
-	Usage
-	  $ is-github-down
-	  🦄 It's down. Go outside!
+  Usage
+    $ is-github-down
+    🦄 It's down. Go outside!
 ```
 
 
