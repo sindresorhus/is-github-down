@@ -1,0 +1,40 @@
+{
+  "name": "is-github-down",
+  "version": "0.0.0",
+  "description": "Check if GitHub is down",
+  "license": "MIT",
+  "repository": "sindresorhus/is-github-down",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "github",
+    "down",
+    "check",
+    "up",
+    "status"
+  ],
+  "dependencies": {
+    "got": "^6.1.1",
+    "meow": "^3.7.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "execa": "^0.2.2",
+    "xo": "*"
+  }
+}
