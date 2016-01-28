@@ -1,6 +1,6 @@
 {
   "name": "is-github-down",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Check if GitHub is down",
   "license": "MIT",
   "repository": "sindresorhus/is-github-down",
