@@ -12,7 +12,7 @@
 	},
 	"bin": "cli.js",
 	"engines": {
-		"node": ">=4"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -30,12 +30,12 @@
 		"status"
 	],
 	"dependencies": {
-		"got": "^6.1.1",
-		"meow": "^3.7.0"
+		"got": "^11.0.1",
+		"meow": "^6.1.0"
 	},
 	"devDependencies": {
-		"ava": "^0.25.0",
-		"execa": "^0.2.2",
-		"xo": "^0.16.0"
+		"ava": "^2.4.0",
+		"execa": "^4.0.0",
+		"xo": "^0.29.1"
 	}
 }

@@ -6,12 +6,15 @@ const got = require('got');
 meow(`
 	Usage
 	  $ is-github-down
-	  🦄  It's down. Go outside!
+	  🦄  It's down. Play with your 😸/🐶! And stay home!
 `);
 
-got.head('github.com').then(() => {
-	console.error(`\n 🐈  It's up. Go back to work!`);
-	process.exitCode = 1;
-}).catch(() => {
-	console.log(`\n🦄  It's down. Go outside!`);
-});
+(async () => {
+	try {
+		await got.head('https://github.com', {timeout: 10});
+		console.error('\n 🐈  It\'s up. Go back to work!');
+		process.exitCode = 1;
+	} catch {
+		console.log('\n🦄  It\'s down. Play with your 😸/🐶! And stay home!');
+	}
+})();
