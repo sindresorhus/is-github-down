@@ -11,7 +11,11 @@ meow(`
 
 (async () => {
 	try {
-		await got.head('https://github.com', {timeout: 10});
+		await got.head('https://github.com', {
+			timeout: 10000,
+			retry: 2
+		});
+
 		console.error('\n 🐈  It\'s up. Go back to work!');
 		process.exitCode = 1;
 	} catch {

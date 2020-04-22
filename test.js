@@ -8,8 +8,8 @@ test('main', async t => {
 		const {stdout} = await execa('./cli.js');
 		returnValue = stdout;
 	} catch (error) {
-		const {stdout} = error;
-		returnValue = stdout;
+		const {stderr} = error;
+		returnValue = stderr;
 	}
 
 	t.regex(returnValue, /down|up/);
