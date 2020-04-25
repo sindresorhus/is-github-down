@@ -5,12 +5,12 @@ test('main', async t => {
 	let returnValue;
 
 	try {
-		const {stdout} = await execa('./cli.js');
-		returnValue = stdout;
+		const {stdout, stderr} = await execa('./cli.js');
+		returnValue = stdout || stderr;
 	} catch (error) {
-		const {stderr} = error;
-		returnValue = stderr;
+		const {stdout} = error;
+		returnValue = stdout;
 	}
 
-	t.regex(returnValue, /down|up/);
+	t.regex(returnValue, /down|up|issues/);
 });
