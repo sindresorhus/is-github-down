@@ -10,21 +10,21 @@ meow(`
 `);
 
 (async () => {
-	const result = await got('https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json', {
+	const {status} = await got('https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json', {
 		timeout: 10000,
 		retry: 2
 	}).json();
 
-	if (['major', 'critical'].includes(result.status.indicator) === true) {
+	if (['major', 'critical'].includes(status.indicator)) {
 		console.log('\n🦄  It\'s down. Play with your 😸/🐶! And stay home!\n');
-		console.log('Status page: https://www.githubstatus.com/');
+		console.log('Status page: https://githubstatus.com');
 		process.exitCode = 1;
 		return;
 	}
 
-	if (result.status.indicator === 'minor') {
+	if (status.indicator === 'minor') {
 		console.log('\n🤔 There might be some issues. Probably better to play with your 😸/🐶 instead! Also stay at home!\n');
-		console.log('Status page: https://www.githubstatus.com/');
+		console.log('Status page: https://githubstatus.com');
 		process.exitCode = 1;
 		return;
 	}
