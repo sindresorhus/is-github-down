@@ -1,4 +1,4 @@
-# is-github-down [![Build Status](https://travis-ci.com/sindresorhus/is-github-down.svg?branch=master)](https://travis-ci.com/sindresorhus/is-github-down)
+# is-github-down
 
 > Check if GitHub is down
 
