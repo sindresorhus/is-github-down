@@ -1,18 +1,20 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const got = require('got');
+import process from 'node:process';
+import meow from 'meow';
+import got from 'got';
 
 meow(`
 	Usage
 	  $ is-github-down
 	  🦄  It's down. Play with your 😸/🐶! And stay home!
-`);
+`, {
+	importMeta: import.meta,
+});
 
 (async () => {
 	const {status} = await got('https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json', {
-		timeout: 10000,
-		retry: 2
+		timeout: 10_000,
+		retry: 2,
 	}).json();
 
 	if (['major', 'critical'].includes(status.indicator)) {

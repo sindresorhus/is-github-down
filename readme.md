@@ -4,14 +4,14 @@
 
 ## Quick usage
 
-```
-$ npx is-github-down
+```sh
+npx is-github-down
 ```
 
 ## Install
 
-```
-$ npm install --global is-github-down
+```sh
+npm install --global is-github-down
 ```
 
 ## Usage
